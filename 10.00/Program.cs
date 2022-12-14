@@ -10,6 +10,9 @@ namespace _10._00
     {
         static void Main(string[] args)
         {
+            Book LOTR = new Book("the lord of the Rings", 9250);
+            Console.WriteLine(LOTR.title);
+            // LOTR.pages is private
         }
     }
 }
