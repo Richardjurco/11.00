@@ -10,9 +10,14 @@ namespace _10._00
     {
         static void Main(string[] args)
         {
-            Book LOTR = new Book("the lord of the Rings", 9250);
-            Console.WriteLine(LOTR.title);
-            // LOTR.pages is private
+            Book LOTR = new Book();
+            LOTR.Title("Lord of the Rings");
+            LOTR.Pages(576);
+            LOTR.Category("Fantasy");
+            LOTR.Author("J.R.R.Tolkien");
+            LOTR = ReleaseDate("29.7.1954");
+            LOTR.vypis(LOTR);
+
         }
     }
 }
