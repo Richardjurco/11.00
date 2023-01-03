@@ -13,7 +13,7 @@ namespace _10._00
         private int pages;
         private string category;
         private string author;
-        private string releaseDate;
+        private int releaseDate;
         public string Title(string title)
         {
 
@@ -30,7 +30,12 @@ namespace _10._00
             this.category = strcategory;
             return category;
         }
-        public string ReleaseDate(string intreleaseDate)
+        public String Author(string strauthor)
+        {
+            this.author = strauthor;
+            return author;
+        }
+        public int ReleaseDate(int intreleaseDate)
         {
             this.releaseDate = intreleaseDate;
             return releaseDate;
@@ -44,6 +49,8 @@ namespace _10._00
             Console.WriteLine(author);
             Console.WriteLine(releaseDate);
         }
+    }
+}
        
         
 

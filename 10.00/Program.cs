@@ -15,8 +15,8 @@ namespace _10._00
             LOTR.Pages(576);
             LOTR.Category("Fantasy");
             LOTR.Author("J.R.R.Tolkien");
-            LOTR = ReleaseDate("29.7.1954");
-            LOTR.vypis(LOTR);
+            LOTR.ReleaseDate(1954);
+            LOTR.vypis();
 
         }
     }
