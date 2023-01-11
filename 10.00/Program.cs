@@ -19,10 +19,10 @@ namespace Open_Lab_10._04
             //lotr.releasedate = 1989;
             //lotr.author = "michalelo";
             //lotr.pages = 1000;
-            Book LOTR3 = new Book();
-            Book LOTR2 = new Book(int iPages, string sTitle);
+            Book LOTR3 = new Book(1000, "lord of the rings3");
+            Book LOTR2 = new Book();
             Book Hobbit = new Book();
-            Console.WriteLine(LOTR.ToString());
+            Console.WriteLine(LOTR.ToString("roman", "Hobbit",500,1724,"samko"));
 
         }
     }
