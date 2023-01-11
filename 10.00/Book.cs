@@ -1,10 +1,10 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Open_Lab_10._04
+namespace Open_Lab_10._05
 {
     internal class Book
     {
@@ -15,6 +15,12 @@ namespace Open_Lab_10._04
         private int releasedate;
         private string author;
 
+        /// <summary>
+        /// list containig categories
+        /// </summary>
+        public static List<string> categoryList = new List<string>() {"Detské","Romantické","Naučné","Sci-Fi","Dobrodružné"};
+
+        
         public Book()
         {
             category = "-1";
@@ -47,7 +53,6 @@ namespace Open_Lab_10._04
         }
         public string Category
         {
-            get { return category; }
             set { category = value; }
         }
         public string Author
@@ -90,13 +95,6 @@ namespace Open_Lab_10._04
         {
             return ($"{category}\n{title}\n{releasedate}\n{author}\n{pages}");
         }
-
-
-
-
-
-    }
-}
 
 
 
