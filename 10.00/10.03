@@ -1,0 +1,19 @@
+﻿using System;
+
+namespace _10._03
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Book  = new Book();
+            LOTR.Title("Lord of the Rings");
+            LOTR.Pages(576);
+            LOTR.Category("Fantasy");
+            LOTR.Author("J.R.R.Tolkien");
+            LOTR.ReleaseDate(1954);
+            LOTR.vypis();
+
+        }
+    }
+}

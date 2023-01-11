@@ -1,59 +1,105 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _10._00
+namespace Open_Lab_10._04
 {
     internal class Book
     {
+
+        private string category;
         private string title;
         private int pages;
-        private string category;
+        private int releasedate;
         private string author;
-        private int releaseDate;
-        public string Title(string title)
-        {
 
-            this.title = title;
-            return title;
-        }
-        public int Pages(int intpages)
+        public Book()
         {
-            this.pages = intpages;
-            return pages;
+            category = "-1";
+            title = "-1";
+            pages = -1;
+            releasedate = -1;
+            author = "-1";
         }
-        public String Category(string strcategory)
+        public Book(int iPages, string sTitle)
         {
-            this.category = strcategory;
-            return category;
+            category = "-1";
+            releasedate = -1;
+            author = "-1";
+            this.title = sTitle;
+            this.pages = iPages;
         }
-        public String Author(string strauthor)
+        public Book(string sCategory, string sTitle, int iPages, int iReleasedate, string sAuthor)
         {
-            this.author = strauthor;
-            return author;
+            this.category = sCategory;
+            this.title = sTitle;
+            this.pages = iPages;
+            this.releasedate = iReleasedate;
+            this.author = sAuthor;
         }
-        public int ReleaseDate(int intreleaseDate)
-        {
-            this.releaseDate = intreleaseDate;
-            return releaseDate;
-        }
-        public void vypis()
 
+        public string Title
         {
-            Console.WriteLine(title);
-            Console.WriteLine(pages);
-            Console.WriteLine(category);
-            Console.WriteLine(author);
-            Console.WriteLine(releaseDate);
+            get { return title; }
+            set { title = value; }
         }
+        public string Category
+        {
+            get { return category; }
+            set { category = value; }
+        }
+        public string Author
+        {
+            get { return author; }
+            set { author = value; }
+        }
+        public int Pages
+        {
+            get { return pages; }
+            set
+            {
+                pages = value;
+                if (pages < 0)
+                {
+                    pages = 1;
+                }
+
+            }
+        }
+
+        public int Releasedate
+        {
+            get { return releasedate; }
+            set
+            {
+                releasedate = value;
+
+                if (releasedate > 2021 | releasedate < 1450)
+                {
+                    releasedate = -1;
+                    
+                }
+            }
+
+        }
+
+
+        public override string ToString()
+        {
+            return ($"{category}\n{title}\n{releasedate}\n{author}\n{pages}");
+        }
+
+
+
+
+
     }
 }
-       
-        
 
-        
+
+
+
 
 
