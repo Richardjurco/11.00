@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Open_Lab_10._05
+namespace Open_Lab_11._00
 {
     internal class Book
     {
@@ -18,9 +18,9 @@ namespace Open_Lab_10._05
         /// <summary>
         /// list containig categories
         /// </summary>
-        public static List<string> categoryList = new List<string>() {"Detské","Romantické","Naučné","Sci-Fi","Dobrodružné"};
+        public static List<string> categoryList = new List<string>() { "Detské", "Romantické", "Naučné", "Sci-Fi", "Dobrodružné" };
 
-        
+
         public Book()
         {
             category = "-1";
@@ -84,7 +84,7 @@ namespace Open_Lab_10._05
                 if (releasedate > 2021 | releasedate < 1450)
                 {
                     releasedate = -1;
-                    
+
                 }
             }
 
@@ -95,6 +95,8 @@ namespace Open_Lab_10._05
         {
             return ($"{category}\n{title}\n{releasedate}\n{author}\n{pages}");
         }
+    }
+}
 
 
 
